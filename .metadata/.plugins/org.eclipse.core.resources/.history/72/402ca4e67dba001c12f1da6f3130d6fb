@@ -1,0 +1,61 @@
+package com.stockManagement.stockManagement.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.stockManagement.stockManagement.Exceptions.productNotFoundException;
+import com.stockManagement.stockManagement.Exceptions.stockNotAvailableException;
+import com.stockManagement.stockManagement.entities.Products;
+import com.stockManagement.stockManagement.services.ProductService;
+
+//@RestController
+public class ProductController {
+	
+	
+	
+	@Autowired
+	private ProductService productService;
+	
+	
+	
+	// Display Product Details
+	
+	@GetMapping("/displayProduct")
+	public List<Products> displayProducts() throws productNotFoundException
+	{
+		
+		return this.productService.displayProducts();
+	}
+	@PostMapping("/addProduct")
+	public int addNewProduct(@RequestBody Products product)
+	{
+		 return productService.addNewProduct(product)+ 1;
+		 
+	}
+	
+	@PostMapping("/editProduct")
+	public int editProduct(@RequestBody Products product) throws productNotFoundException {
+		
+		return productService.editproduct(product);
+	}
+	@PostMapping("/buyProduct/{productID}")
+	
+	public int buyProduct( @PathVariable int productID) throws stockNotAvailableException {
+		
+		return productService.buyproduct(productID);
+	}
+	
+	
+	
+	
+
+
+	
+
+}

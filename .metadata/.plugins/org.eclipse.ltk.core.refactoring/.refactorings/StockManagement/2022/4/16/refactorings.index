@@ -1,0 +1,14 @@
+1649822319480	Rename package 'com.stockManagement.stockManagement.controller'
+1649822341791	Rename package 'com.stockManagement.stockManagement.DAO'
+1649822493318	Rename package 'com.stockManagement.stockManagement.services'
+1649823370026	Rename package 'com.stockManagement.stockManagement.entities'
+1649823419511	Rename package 'com.stockManagement.stockManagement.Exceptions'
+1649824055851	Delete element
+1649825013802	Rename type 'StockManagementApplication'
+1649825021832	Rename type 'StockManagementApplicationTests'
+1649825178566	Delete element
+1649825329041	Delete element
+1649825351825	Delete element
+1649830931789	Delete element
+1649859403435	Delete element
+1649859729497	Rename compilation unit 'SalesProductsServiceImpl.java'
