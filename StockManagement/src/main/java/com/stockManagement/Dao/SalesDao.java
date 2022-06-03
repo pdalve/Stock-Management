@@ -2,6 +2,7 @@ package com.stockManagement.Dao;
 
 import java.util.Date;
 import java.util.List;
+////
 
 import com.stockManagement.entities.ProductsSalesData;
 import com.stockManagement.entities.Sales;
